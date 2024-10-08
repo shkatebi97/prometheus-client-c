@@ -16,6 +16,10 @@
 
 #include <assert.h>
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 #ifndef PROM_ASSERT_H
 #define PROM_ASSERT_H
 
@@ -24,5 +28,9 @@
 #else
 #define PROM_ASSERT(i)
 #endif  // PROM_TEST
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_ASSERT_H

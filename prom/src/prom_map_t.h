@@ -25,6 +25,10 @@
 // Private
 #include "prom_linked_list_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 typedef void (*prom_map_node_free_value_fn)(void *);
 
 struct prom_map_node {
@@ -41,5 +45,9 @@ struct prom_map {
   pthread_rwlock_t *rwlock;
   prom_map_node_free_value_fn free_value_fn;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_MAP_T_H

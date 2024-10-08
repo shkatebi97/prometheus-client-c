@@ -21,6 +21,10 @@
 #include "prom_map_t.h"
 #include "prom_string_builder_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 struct prom_collector {
   const char *name;
   prom_map_t *metrics;
@@ -29,5 +33,9 @@ struct prom_collector {
   const char *proc_limits_file_path;
   const char *proc_stat_file_path;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_COLLECTOR_T_H

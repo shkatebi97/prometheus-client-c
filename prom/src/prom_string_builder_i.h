@@ -21,6 +21,10 @@
 
 #include "prom_string_builder_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * API PRIVATE
  * @brief Constructor for prom_string_builder
@@ -74,5 +78,9 @@ char *prom_string_builder_dump(prom_string_builder_t *self);
  * @brief Getter for str member
  */
 char *prom_string_builder_str(prom_string_builder_t *self);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_STRING_BUILDER_I_H

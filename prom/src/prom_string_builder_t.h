@@ -17,10 +17,18 @@
 #ifndef PROM_STRING_BUILDER_T_H
 #define PROM_STRING_BUILDER_T_H
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 struct prom_string_builder;
 /**
  * @brief API PRIVATE A structure with functions responsible for building a string
  */
 typedef struct prom_string_builder prom_string_builder_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_STRING_BUILDER_T_H

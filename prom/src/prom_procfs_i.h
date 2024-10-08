@@ -19,8 +19,16 @@
 
 #include "prom_procfs_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 prom_procfs_buf_t *prom_procfs_buf_new(const char *path);
 
 int prom_procfs_buf_destroy(prom_procfs_buf_t *self);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_PROCFS_I_H

@@ -19,9 +19,17 @@
 
 #include "prom_string_builder_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 typedef struct prom_metric_formatter {
   prom_string_builder_t *string_builder;
   prom_string_builder_t *err_builder;
 } prom_metric_formatter_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_METRIC_FORMATTER_T_H

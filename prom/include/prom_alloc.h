@@ -25,6 +25,10 @@ limitations under the License.
 #include <stdlib.h>
 #include <string.h>
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @brief Redefine this macro if you wish to override it. The default value is malloc.
  */
@@ -45,4 +49,7 @@ limitations under the License.
  */
 #define prom_free free
 
+#ifdef __cplusplus
+}
+#endif
 #endif  // PROM_ALLOC_H

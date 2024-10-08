@@ -20,6 +20,10 @@
 #ifndef PROM_METRIC_SAMPLE_I_H
 #define PROM_METRIC_SAMPLE_I_H
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @brief API PRIVATE Return a prom_metric_sample_t*
  *
@@ -45,5 +49,9 @@ int prom_metric_sample_destroy_generic(void *);
  * This function ignores any errors.
  */
 void prom_metric_sample_free_generic(void *gen);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_METRIC_SAMPLE_I_H

@@ -23,6 +23,10 @@
 // Private
 #include "prom_metric_sample_histogram_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @brief API PRIVATE Create a pointer to a prom_metric_sample_histogram_t
  */
@@ -43,5 +47,9 @@ int prom_metric_sample_histogram_destroy_generic(void *gen);
 char *prom_metric_sample_histogram_bucket_to_str(double bucket);
 
 void prom_metric_sample_histogram_free_generic(void *gen);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_METRIC_HISTOGRAM_SAMPLE_I_H

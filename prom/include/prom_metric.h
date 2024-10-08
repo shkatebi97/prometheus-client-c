@@ -25,6 +25,10 @@ limitations under the License.
 #include "prom_metric_sample.h"
 #include "prom_metric_sample_histogram.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 struct prom_metric;
 /**
  * @brief A prometheus metric.
@@ -63,5 +67,9 @@ prom_metric_sample_t *prom_metric_sample_from_labels(prom_metric_t *self, const 
  */
 prom_metric_sample_histogram_t *prom_metric_sample_histogram_from_labels(prom_metric_t *self,
                                                                          const char **label_values);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_METRIC_H

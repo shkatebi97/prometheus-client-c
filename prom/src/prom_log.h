@@ -19,10 +19,18 @@
 #ifndef PROM_LOG_H
 #define PROM_LOG_H
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 #ifdef PROM_LOG_ENABLE
 #define PROM_LOG(msg) printf("%s %s %s %s %d %s\n", __DATE__, __TIME__, __FILE__, __FUNCTION__, __LINE__, msg);
 #else
 #define PROM_LOG(msg)
 #endif  // PROM_LOG_ENABLE
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_LOG_H

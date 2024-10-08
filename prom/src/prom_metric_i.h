@@ -21,6 +21,10 @@
 #ifndef PROM_METRIC_I_INCLUDED
 #define PROM_METRIC_I_INCLUDED
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @brief API PRIVATE Returns a *prom_metric
  */
@@ -41,5 +45,9 @@ int prom_metric_destroy_generic(void *item);
  * @brief API Private takes a generic item, casts to a *prom_metric_t and destroys it. Discards any errors.
  */
 void prom_metric_free_generic(void *item);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_METRIC_I_INCLUDED

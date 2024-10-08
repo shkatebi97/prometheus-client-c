@@ -20,6 +20,10 @@
 #include "prom_gauge.h"
 #include "prom_procfs_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 extern prom_gauge_t *prom_process_open_fds;
 extern prom_gauge_t *prom_process_max_fds;
 extern prom_gauge_t *prom_process_virtual_memory_max_bytes;
@@ -39,5 +43,9 @@ typedef struct prom_process_limits_current_row {
 } prom_process_limits_current_row_t;
 
 typedef prom_procfs_buf_t prom_process_limits_file_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_PROCESS_T_H

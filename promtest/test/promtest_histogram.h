@@ -19,11 +19,19 @@
 #ifndef PROMTEST_HISTOGRAM_H
 #define PROMTEST_HISTOGRAM_H
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 extern prom_histogram_t *foo_histogram;
 
 int promtest_histogram_setup(void);
 int promtest_histogram_teardown(void);
 
 void promtest_histogram(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROMTEST_HISTOGRAM_H

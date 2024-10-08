@@ -19,6 +19,10 @@
 
 #include "prom_map_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 prom_map_t *prom_map_new(void);
 
 int prom_map_set_free_value_fn(prom_map_t *self, prom_map_node_free_value_fn free_value_fn);
@@ -34,5 +38,9 @@ int prom_map_destroy(prom_map_t *self);
 size_t prom_map_size(prom_map_t *self);
 
 prom_map_node_t *prom_map_node_new(const char *key, void *value, prom_map_node_free_value_fn free_value_fn);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_MAP_I_INCLUDED

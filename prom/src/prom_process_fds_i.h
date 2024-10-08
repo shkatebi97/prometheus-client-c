@@ -17,7 +17,15 @@
 #ifndef PROM_PROESS_FDS_I_INCLUDED
 #define PROM_PROESS_FDS_I_INCLUDED
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 int prom_process_fds_count(const char *path);
 int prom_process_fds_init(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_PROESS_FDS_I_INCLUDED

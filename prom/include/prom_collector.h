@@ -20,6 +20,10 @@ limitations under the License.
 #include "prom_map.h"
 #include "prom_metric.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @file prom_collector.h
  * @brief A Prometheus collector returns a collection of metrics
@@ -96,5 +100,9 @@ int prom_collector_add_metric(prom_collector_t *self, prom_metric_t *metric);
  * @return A non-zero integer value upon failure.
  */
 int prom_collector_set_collect_fn(prom_collector_t *self, prom_collect_fn *fn);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_COLLECTOR_H

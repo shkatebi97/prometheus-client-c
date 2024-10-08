@@ -28,6 +28,10 @@
 #include "prom_metric_formatter_t.h"
 #include "prom_string_builder_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 struct prom_collector_registry {
   const char *name;
   bool disable_process_metrics;              /**< Disables the collection of process metrics */
@@ -35,6 +39,10 @@ struct prom_collector_registry {
   prom_string_builder_t *string_builder;     /**< Enables string building */
   prom_metric_formatter_t *metric_formatter; /**< metric formatter for metric exposition on bridge call */
   pthread_rwlock_t *lock;                    /**< mutex for safety against concurrent registration */
+
+#ifdef __cplusplus
+}
+#endif
 };
 
 #endif  // PROM_REGISTRY_T_H

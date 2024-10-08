@@ -22,6 +22,10 @@ limitations under the License.
 #ifndef PROM_METRIC_SAMPLE_HISOTGRAM_H
 #define PROM_METRIC_SAMPLE_HISOTGRAM_H
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 struct prom_metric_sample_histogram;
 /**
  * @brief A histogram metric sample
@@ -35,5 +39,9 @@ typedef struct prom_metric_sample_histogram prom_metric_sample_histogram_t;
  * @return Non-zero integer value upon failure
  */
 int prom_metric_sample_histogram_observe(prom_metric_sample_histogram_t *self, double value);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_METRIC_SAMPLE_HISOTGRAM_H

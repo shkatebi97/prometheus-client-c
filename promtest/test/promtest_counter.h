@@ -19,11 +19,19 @@
 #ifndef PROMTEST_COUNTER_H
 #define PROMTEST_COUNTER_H
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 extern prom_counter_t *foo_counter;
 
 int promtest_counter_setup(void);
 int promtest_counter_teardown(void);
 
 void promtest_counter(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROMTEST_COUNTER_H

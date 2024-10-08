@@ -19,8 +19,16 @@
 #ifndef PROM_COLLECTOR_REGISTRY_I_INCLUDED
 #define PROM_COLLECTOR_REGISTRY_I_INCLUDED
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 int prom_collector_registry_enable_custom_process_metrics(prom_collector_registry_t *self,
                                                           const char *process_limits_path,
                                                           const char *process_stats_path);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_COLLECTOR_REGISTRY_I_INCLUDED

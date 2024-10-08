@@ -19,6 +19,10 @@
 #ifndef PROMTTEST_HELPERS_H
 #define PROMTTEST_HELPERS_H
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 #define PROMTEST_THREAD_POOL_SIZE 5
 
 extern struct MHD_Daemon *promtest_daemon;
@@ -34,5 +38,9 @@ promtest_popen_buf_t *promtest_popen_buf_new(FILE *f);
 int promtest_popen_buf_destroy(promtest_popen_buf_t *self);
 int promtest_popen_buf_read(promtest_popen_buf_t *self);
 int promtest_popen_buf_ensure_space(promtest_popen_buf_t *self);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROMTEST_HELPERS_H

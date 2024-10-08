@@ -26,6 +26,10 @@ limitations under the License.
 
 #include "prom_metric.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @brief A prometheus gauge.
  *
@@ -151,5 +155,9 @@ int prom_gauge_sub(prom_gauge_t *self, double r_value, const char **label_values
  *     prom_gauge_set(foo_gauge, 22, NULL);
  */
 int prom_gauge_set(prom_gauge_t *self, double r_value, const char **label_values);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_GAUGE_H

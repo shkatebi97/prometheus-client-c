@@ -19,6 +19,10 @@
 
 #include "prom_linked_list.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 typedef enum { PROM_LESS = -1, PROM_EQUAL = 0, PROM_GREATER = 1 } prom_linked_list_compare_t;
 
 /**
@@ -50,5 +54,9 @@ struct prom_linked_list {
   prom_linked_list_free_item_fn free_fn;
   prom_linked_list_compare_item_fn compare_fn;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_LIST_T_H

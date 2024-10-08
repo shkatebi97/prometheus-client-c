@@ -19,10 +19,18 @@ limitations under the License.
 
 #include <stdlib.h>
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 struct prom_linked_list;
 /**
  * @brief Provides a generic linked list
  */
 typedef struct prom_linked_list prom_linked_list_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_LIST_H

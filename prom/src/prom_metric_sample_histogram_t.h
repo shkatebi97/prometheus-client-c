@@ -27,6 +27,10 @@
 #ifndef PROM_METRIC_HISTOGRAM_SAMPLE_T_H
 #define PROM_METRIC_HISTOGRAM_SAMPLE_T_H
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 struct prom_metric_sample_histogram {
   prom_linked_list_t *l_value_list;
   prom_map_t *l_values;
@@ -35,5 +39,9 @@ struct prom_metric_sample_histogram {
   prom_histogram_buckets_t *buckets;
   pthread_rwlock_t *rwlock;
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_METRIC_HISTOGRAM_SAMPLE_T_H

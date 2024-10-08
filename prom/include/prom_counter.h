@@ -21,6 +21,10 @@ limitations under the License.
 
 #include "prom_metric.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @file prom_counter.h
  * @brief https://prometheus.io/docs/concepts/metric_types/#counter
@@ -99,5 +103,9 @@ int prom_counter_inc(prom_counter_t *self, const char **label_values);
  *     prom_counter_add(foo_counter, 22, NULL);
  */
 int prom_counter_add(prom_counter_t *self, double r_value, const char **label_values);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_COUNTER_H

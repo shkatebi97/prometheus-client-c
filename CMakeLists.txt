@@ -17,6 +17,7 @@ if(NOT DEFINED CMAKE_INSTALL_LIBDIR)
 endif()
 
 add_subdirectory (prom)
+add_subdirectory (promhttp)
 
 # Sometimes linking against libatomic is required for atomic ops, if
 # the platform doesn't support lock-free atomics.

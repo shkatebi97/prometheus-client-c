@@ -20,6 +20,10 @@
 // Private
 #include "prom_linked_list_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @brief API PRIVATE Returns a pointer to a prom_linked_list
  */
@@ -90,5 +94,9 @@ int prom_linked_list_set_compare_fn(prom_linked_list_t *self, prom_linked_list_c
  * @brief does nothing
  */
 void prom_linked_list_no_op_free(void *item);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_LIST_I_INCLUDED

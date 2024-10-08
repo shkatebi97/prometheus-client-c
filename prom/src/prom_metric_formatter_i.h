@@ -23,6 +23,10 @@
 #include "prom_metric_formatter_t.h"
 #include "prom_metric_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @brief API PRIVATE prom_metric_formatter constructor
  */
@@ -80,5 +84,9 @@ int prom_metric_formatter_clear(prom_metric_formatter_t *self);
  * @brief API PRIVATE Returns the string built by prom_metric_formatter
  */
 char *prom_metric_formatter_dump(prom_metric_formatter_t *metric_formatter);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_METRIC_FORMATTER_I_H

@@ -25,6 +25,10 @@ limitations under the License.
 #include "prom_collector.h"
 #include "prom_metric.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @brief A prom_registry_t is responsible for registering metrics and briding them to the string exposition format
  */
@@ -118,5 +122,9 @@ const char *prom_collector_registry_bridge(prom_collector_registry_t *self);
  * @return A non-zero integer value upon failure
  */
 int prom_collector_registry_validate_metric_name(prom_collector_registry_t *self, const char *metric_name);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_H

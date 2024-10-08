@@ -22,6 +22,10 @@ limitations under the License.
 #ifndef PROM_METRIC_SAMPLE_H
 #define PROM_METRIC_SAMPLE_H
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 struct prom_metric_sample;
 /**
  * @brief Contains the specific metric and value given the name and label set
@@ -56,5 +60,9 @@ int prom_metric_sample_sub(prom_metric_sample_t *self, double r_value);
  * @return Non-zero integer value upon failure
  */
 int prom_metric_sample_set(prom_metric_sample_t *self, double r_value);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_METRIC_SAMPLE_H

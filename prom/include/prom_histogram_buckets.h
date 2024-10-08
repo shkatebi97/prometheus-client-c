@@ -24,6 +24,10 @@ limitations under the License.
 #ifndef PROM_HISTOGRAM_BUCKETS_H
 #define PROM_HISTOGRAM_BUCKETS_H
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 typedef struct prom_histogram_buckets {
   int count;                  /**< Number of buckets */
   const double *upper_bounds; /**< The bucket values */
@@ -77,5 +81,9 @@ int prom_histogram_buckets_destroy(prom_histogram_buckets_t *self);
  * @return The count of buckets
  */
 size_t prom_histogram_buckets_count(prom_histogram_buckets_t *self);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_HISTOGRAM_BUCKETS_H

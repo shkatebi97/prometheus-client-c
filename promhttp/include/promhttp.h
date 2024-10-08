@@ -28,6 +28,10 @@
 #include "microhttpd.h"
 #include "prom_collector_registry.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @brief Sets the active registry for metric scraping.
  *
@@ -46,3 +50,8 @@ void promhttp_set_active_collector_registry(prom_collector_registry_t *active_re
  */
 struct MHD_Daemon *promhttp_start_daemon(unsigned int flags, unsigned short port, MHD_AcceptPolicyCallback apc,
                                          void *apc_cls);
+
+
+#ifdef __cplusplus
+}
+#endif

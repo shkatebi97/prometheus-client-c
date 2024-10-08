@@ -27,6 +27,10 @@ limitations under the License.
 #include "prom_histogram_buckets.h"
 #include "prom_metric.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @brief A prometheus histogram.
  *
@@ -77,5 +81,9 @@ int prom_histogram_destroy(prom_histogram_t *self);
  * @return Non-zero value upon failure
  */
 int prom_histogram_observe(prom_histogram_t *self, double value, const char **label_values);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_HISTOGRAM_INCLUDED

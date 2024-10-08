@@ -28,6 +28,10 @@
 #include "prom_map_t.h"
 #include "prom_metric_formatter_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @brief API PRIVATE Contains metric type constants
  */
@@ -53,5 +57,9 @@ struct prom_metric {
   pthread_rwlock_t *rwlock;           /**< rwlock           Required for locking on certain non-atomic operations */
   const char **label_keys;            /**< labels           Array comprised of const char **/
 };
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_METRIC_T_H

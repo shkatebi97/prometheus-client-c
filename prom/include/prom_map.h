@@ -17,10 +17,18 @@ limitations under the License.
 #ifndef PROM_MAP_H
 #define PROM_MAP_H
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 struct prom_map;
 typedef struct prom_map prom_map_t;
 
 struct prom_map_node;
 typedef struct prom_map_node prom_map_node_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_MAP_H

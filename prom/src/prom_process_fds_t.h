@@ -19,6 +19,14 @@
 #ifndef PROM_PROESS_FDS_T_H
 #define PROM_PROESS_FDS_T_H
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 extern prom_gauge_t *prom_process_open_fds;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_PROESS_FDS_T_H

@@ -22,6 +22,10 @@
 #include "prom_map_t.h"
 #include "prom_process_limits_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 /**
  * @brief Initialize the process gauge metrics
  */
@@ -71,5 +75,9 @@ int prom_process_limits_rdp_next_token(prom_process_limits_file_t *f);
 bool prom_process_limits_rdp_match(prom_process_limits_file_t *f, const char *token);
 
 int prom_process_limits_init(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_PROCESS_I_H

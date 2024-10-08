@@ -20,6 +20,10 @@
 #include "prom_gauge.h"
 #include "prom_procfs_t.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 extern prom_gauge_t *prom_process_cpu_seconds_total;
 extern prom_gauge_t *prom_process_virtual_memory_bytes;
 extern prom_gauge_t *prom_process_resident_memory_bytes;
@@ -84,5 +88,9 @@ typedef struct prom_process_stat {
 } prom_process_stat_t;
 
 typedef prom_procfs_buf_t prom_process_stat_file_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif  // PROM_PROCESS_STATS_T_H

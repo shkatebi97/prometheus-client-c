@@ -11,3 +11,4 @@ _CPack_Packages/
 *tar.gz
 *vgcore*
 *.o
+build
